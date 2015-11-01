@@ -23,10 +23,12 @@ DEPEND='ruby(curses)'
 fzf_CONTENTS='usr/'
 
 fzf_bash_SUMMARY='fzf key bindings for Bash'
-fzf_bash_CONTENTS='etc/profile.d/'
+fzf_bash_CONTENTS='etc/profile.d/fzf.sh'
 fzf_bash_REQUIRES='fzf bash'
 
 fzf_zsh_SUMMARY='fzf key bindings for Z shell'
+fzf_zsh_CONTENTS='etc/profile.d/fzf.zsh'
+fzf_zsh_REQUIRES='fzf zsh'
 
 fzf_fish_SUMMARY='fzf key bindings for fish shell'
 
@@ -55,7 +57,8 @@ src_install () {
   # Shell key bindings
   insinto /etc/profile.d
   newins "${S}/shell/key-bindings.bash" fzf.sh
-  # TODO: Z shell and fish key bindings
+  newins "${S}/shell/key-bindings.zsh" fzf.zsh
+  # TODO: fish key bindings
 
   # Man file
   insinto /usr/share/man/man1
