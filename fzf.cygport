@@ -1,9 +1,9 @@
-NAME=fzf
-VERSION=0.10.8
+NAME="fzf"
+VERSION='0.10.8'
 RELEASE=1
-CATEGORY=Shells
-SUMMARY="Command line fuzzy finder"
-DESCRIPTION="fzf is a general-purpose command-line fuzzy finder"
-HOMEPAGE=https://github.com/junegunn/fzf
-SRC_URI=https://github.com/junegunn/fzf/archive/${PV}.tar.gz
-SRC_DIR=${PN}-${PV}
+CATEGORY='Shells'
+SUMMARY='Command line fuzzy finder'
+DESCRIPTION='fzf is a general-purpose command-line fuzzy finder'
+HOMEPAGE='https://github.com/junegunn/fzf'
+SRC_URI="https://github.com/junegunn/fzf/archive/${PV}.tar.gz"
+SRC_DIR="${PN}-${PV}"
