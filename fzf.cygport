@@ -26,7 +26,5 @@ fzf_zsh_completion_SUMMARY='fzf completion for Z shell'
 fzf_vim_SUMMARY='fzf Vim integration'
 
 src_compile () {
-  lndirs
-  cd ${B}
-  ./install --bin
+  :
 }
