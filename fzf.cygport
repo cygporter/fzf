@@ -48,8 +48,7 @@ src_compile () {
 
 src_install () {
   # Main executable
-  exeinto /usr/bin
-  doexe "${S}/fzf"
+  dobin "${S}/fzf"
 
   # Shell completion scripts
   insinto /etc/bash_completion.d
@@ -64,6 +63,5 @@ src_install () {
   # TODO: fish key bindings
 
   # Man file
-  insinto /usr/share/man/man1
-  doins "${S}/man/man1/fzf.1"
+  doman "${S}/man/man1/fzf.1"
 }
