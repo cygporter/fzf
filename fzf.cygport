@@ -7,3 +7,18 @@ DESCRIPTION='fzf is a general-purpose command-line fuzzy finder'
 HOMEPAGE='https://github.com/junegunn/fzf'
 SRC_URI="https://github.com/junegunn/fzf/archive/${PV}.tar.gz"
 SRC_DIR="${PN}-${PV}"
+
+PKG_NAMES='fzf
+           fzf-bash
+           fzf-zsh
+           fzf-fish
+           fzf-bash-completion
+           fzf-zsh-completion
+           fzf-vim'
+
+fzf_bash_SUMMARY='fzf key bindings for Bash'
+fzf_zsh_SUMMARY='fzf key bindings for Z shell'
+fzf_fish_SUMMARY='fzf key bindings for fish shell'
+fzf_bash_completion_SUMMARY='fzf completion for Bash'
+fzf_zsh_completion_SUMMARY='fzf completion for Z shell'
+fzf_vim_SUMMARY='fzf Vim integration'
