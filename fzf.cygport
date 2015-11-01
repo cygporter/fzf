@@ -8,6 +8,8 @@ HOMEPAGE='https://github.com/junegunn/fzf'
 SRC_URI="https://github.com/junegunn/fzf/archive/${PV}.tar.gz"
 SRC_DIR="${PN}-${PV}"
 
+PATCH_URI='bash-key-bindings-for-bash-only.patch'
+
 PKG_NAMES='fzf
            fzf-bash
            fzf-zsh
@@ -38,6 +40,11 @@ src_install () {
   insinto /etc/bash_completion.d
   newins "${S}/shell/completion.bash" fzf
   # TODO: Z shell completion
+
+  # Shell key bindings
+  insinto /etc/profile.d
+  newins "${S}/shell/key-bindings.bash" fzf.sh
+  # TODO: Z shell and fish key bindings
 
   # Man file
   insinto /usr/share/man/man1
