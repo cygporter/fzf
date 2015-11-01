@@ -37,6 +37,8 @@ fzf_bash_completion_CONTENTS='etc/bash_completion.d/'
 fzf_bash_completion_REQUIRES='fzf bash-completion'
 
 fzf_zsh_completion_SUMMARY='fzf completion for Z shell'
+fzf_zsh_completion_CONTENTS='etc/profile.d/fzf-completion.zsh'
+fzf_zsh_completion_REQUIRES='fzf zsh'
 
 fzf_vim_SUMMARY='fzf Vim integration'
 
@@ -52,7 +54,8 @@ src_install () {
   # Shell completion scripts
   insinto /etc/bash_completion.d
   newins "${S}/shell/completion.bash" fzf
-  # TODO: Z shell completion
+  insinto /etc/profile.d
+  newins "${S}/shell/completion.zsh" fzf-completion.zsh
 
   # Shell key bindings
   insinto /etc/profile.d
