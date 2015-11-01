@@ -34,6 +34,11 @@ src_install () {
   exeinto /usr/bin
   doexe "${S}/fzf"
 
+  # Shell completion scripts
+  insinto /etc/bash_completion.d
+  newins "${S}/shell/completion.bash" fzf
+  # TODO: Z shell completion
+
   # Man file
   insinto /usr/share/man/man1
   doins "${S}/man/man1/fzf.1"
