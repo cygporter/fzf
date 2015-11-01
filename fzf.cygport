@@ -24,6 +24,7 @@ fzf_CONTENTS='usr/'
 
 fzf_bash_SUMMARY='fzf key bindings for Bash'
 fzf_bash_CONTENTS='etc/profile.d/'
+fzf_bash_REQUIRES='fzf bash'
 
 fzf_zsh_SUMMARY='fzf key bindings for Z shell'
 
@@ -31,6 +32,7 @@ fzf_fish_SUMMARY='fzf key bindings for fish shell'
 
 fzf_bash_completion_SUMMARY='fzf completion for Bash'
 fzf_bash_completion_CONTENTS='etc/bash_completion.d/'
+fzf_bash_completion_REQUIRES='fzf bash-completion'
 
 fzf_zsh_completion_SUMMARY='fzf completion for Z shell'
 
