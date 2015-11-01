@@ -20,7 +20,7 @@ PKG_NAMES='fzf
 
 DEPEND='ruby(curses)'
 
-fzf_CONTENTS='usr/'
+fzf_CONTENTS='usr/bin usr/share/doc usr/share/man'
 
 fzf_bash_SUMMARY='fzf key bindings for Bash'
 fzf_bash_CONTENTS='etc/profile.d/fzf.sh'
@@ -41,6 +41,8 @@ fzf_zsh_completion_CONTENTS='etc/profile.d/fzf-completion.zsh'
 fzf_zsh_completion_REQUIRES='fzf zsh'
 
 fzf_vim_SUMMARY='fzf Vim integration'
+fzf_vim_CONTENTS='usr/share/vim/'
+fzf_vim_REQUIRES='fzf vim'
 
 src_compile () {
   :
@@ -61,6 +63,15 @@ src_install () {
   newins "${S}/shell/key-bindings.bash" fzf.sh
   newins "${S}/shell/key-bindings.zsh" fzf.zsh
   # TODO: fish key bindings
+
+  # Vim bindings.  The upstream method of doing this adds the fzf source
+  # directory to Vim's runtime path, meaning it can find both the fzf
+  # executable and plugins/fzf.vim.  We achieve the same thing by putting
+  # fzf.vim in Vim's main plugin directory, and by symlinking from the Vim
+  # directory to the fzf executable.
+  insinto /usr/share/vim/vimfiles/plugin
+  doins "${S}/plugin/fzf.vim"
+  dosym /usr/bin/fzf /usr/share/vim/vimfiles
 
   # Man file
   doman "${S}/man/man1/fzf.1"
