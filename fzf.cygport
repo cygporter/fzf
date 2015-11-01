@@ -33,4 +33,8 @@ src_install () {
   # Main executable
   exeinto /usr/bin
   doexe "${S}/fzf"
+
+  # Man file
+  insinto /usr/share/man/man1
+  doins "${S}/man/man1/fzf.1"
 }
