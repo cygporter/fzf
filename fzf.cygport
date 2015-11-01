@@ -16,6 +16,8 @@ PKG_NAMES='fzf
            fzf-zsh-completion
            fzf-vim'
 
+DEPEND='ruby(curses)'
+
 fzf_bash_SUMMARY='fzf key bindings for Bash'
 fzf_zsh_SUMMARY='fzf key bindings for Z shell'
 fzf_fish_SUMMARY='fzf key bindings for fish shell'
