@@ -24,3 +24,9 @@ fzf_fish_SUMMARY='fzf key bindings for fish shell'
 fzf_bash_completion_SUMMARY='fzf completion for Bash'
 fzf_zsh_completion_SUMMARY='fzf completion for Z shell'
 fzf_vim_SUMMARY='fzf Vim integration'
+
+src_compile () {
+  lndirs
+  cd ${B}
+  ./install --bin
+}
