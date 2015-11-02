@@ -2,7 +2,7 @@ fzf is a general-purpose command-line fuzzy finder. Cygwin-fzf is the necessary 
 
 For more information, see [the main fzf website][fzf].
 
-# Usage
+## Usage
 
 ```
 cygport fzf.cygport download prep install package upload
