@@ -16,11 +16,12 @@ PKG_NAMES='fzf
            fzf-fish
            fzf-bash-completion
            fzf-zsh-completion
-           fzf-vim'
+           fzf-vim
+           fzf-tmux'
 
 DEPEND='ruby(curses)'
 
-fzf_CONTENTS='usr/bin usr/share/doc usr/share/man'
+fzf_CONTENTS='usr/bin/fzf usr/share/doc usr/share/man'
 
 fzf_bash_SUMMARY='fzf key bindings for Bash'
 fzf_bash_CONTENTS='etc/profile.d/fzf.sh'
@@ -44,13 +45,18 @@ fzf_vim_SUMMARY='fzf Vim integration'
 fzf_vim_CONTENTS='usr/share/vim/'
 fzf_vim_REQUIRES='fzf vim'
 
+fzf_tmux_SUMMARY='fzf tmux integration'
+fzf_tmux_CONTENTS='usr/bin/fzf-tmux'
+fzf_tmux_REQUIRES='fzf tmux'
+
 src_compile () {
   :
 }
 
 src_install () {
-  # Main executable
+  # Main executables
   dobin "${S}/fzf"
+  dobin "${S}/bin/fzf-tmux"
 
   # Shell completion scripts
   insinto /etc/bash_completion.d
