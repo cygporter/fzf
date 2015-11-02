@@ -60,14 +60,29 @@ src_install () {
   dobin "${S}/fzf"
   dobin "${S}/bin/fzf-tmux"
 
-  # Shell completion scripts
+  # Shell scripts
+  #
+  # /etc/profile.d isn't ideal for either the Bash or Z shell scripts.
+  #
+  # - In the Bash case, Cygwin's default /etc/profile doesn't source anything
+  #   Bash-specific, so we instead use a .sh extension.  This means all shells
+  #   including /etc/profile will source that file, so it should have been
+  #   patched above such that the script will bail out if it isn't actually
+  #   Bash.  This is the approach taken by bash-completion, so we're at least
+  #   avoiding treading new ground.
+  #
+  # - In the Z shell case, including the .zsh scripts is done by both
+  #   /etc/profile and /etc/zprofile.  In both cases, the releant bit of code
+  #   currently has the caveat "zsh is in shell compatibility mode here, so we
+  #   probably shouldn't do this", although it looks as though that comment
+  #   should only apply to profile, not zprofile.
+  #
+  # - In the fish case, we're fine: the .fish scripts are included from
+  #   /etc/profile.d by /etc/fish/config.fish.
   insinto /etc/bash_completion.d
   newins "${S}/shell/completion.bash" fzf
   insinto /etc/profile.d
   newins "${S}/shell/completion.zsh" fzf-completion.zsh
-
-  # Shell key bindings
-  insinto /etc/profile.d
   newins "${S}/shell/key-bindings.bash" fzf.sh
   newins "${S}/shell/key-bindings.zsh" fzf.zsh
   newins "${S}/shell/key-bindings.fish" fzf.fish
