@@ -32,6 +32,8 @@ fzf_zsh_CONTENTS='etc/profile.d/fzf.zsh'
 fzf_zsh_REQUIRES='fzf zsh'
 
 fzf_fish_SUMMARY='fzf key bindings for fish shell'
+fzf_fish_CONTENTS='etc/profile.d/fzf.fish'
+fzf_fish_REQUIRES='fzf fish'
 
 fzf_bash_completion_SUMMARY='fzf completion for Bash'
 fzf_bash_completion_CONTENTS='etc/bash_completion.d/'
@@ -68,7 +70,7 @@ src_install () {
   insinto /etc/profile.d
   newins "${S}/shell/key-bindings.bash" fzf.sh
   newins "${S}/shell/key-bindings.zsh" fzf.zsh
-  # TODO: fish key bindings
+  newins "${S}/shell/key-bindings.fish" fzf.fish
 
   # Vim bindings.  The upstream method of doing this adds the fzf source
   # directory to Vim's runtime path, meaning it can find both the fzf
