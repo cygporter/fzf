@@ -25,27 +25,27 @@ fzf_CONTENTS='usr/bin/fzf usr/share/doc usr/share/man'
 
 fzf_bash_SUMMARY='fzf key bindings for Bash'
 fzf_bash_CONTENTS='etc/profile.d/fzf.sh'
-fzf_bash_REQUIRES='fzf bash'
+fzf_bash_REQUIRES='fzf-tmux bash'
 
 fzf_zsh_SUMMARY='fzf key bindings for Z shell'
 fzf_zsh_CONTENTS='etc/profile.d/fzf.zsh'
-fzf_zsh_REQUIRES='fzf zsh'
+fzf_zsh_REQUIRES='fzf-tmux zsh'
 
 fzf_fish_SUMMARY='fzf key bindings for fish shell'
 fzf_fish_CONTENTS='etc/profile.d/fzf.fish'
-fzf_fish_REQUIRES='fzf fish'
+fzf_fish_REQUIRES='fzf-tmux fish'
 
 fzf_bash_completion_SUMMARY='fzf completion for Bash'
 fzf_bash_completion_CONTENTS='etc/bash_completion.d/'
-fzf_bash_completion_REQUIRES='fzf bash-completion'
+fzf_bash_completion_REQUIRES='fzf-tmux bash-completion'
 
 fzf_zsh_completion_SUMMARY='fzf completion for Z shell'
 fzf_zsh_completion_CONTENTS='etc/profile.d/fzf-completion.zsh'
-fzf_zsh_completion_REQUIRES='fzf zsh'
+fzf_zsh_completion_REQUIRES='fzf-tmux zsh'
 
 fzf_vim_SUMMARY='fzf Vim integration'
 fzf_vim_CONTENTS='usr/share/vim/'
-fzf_vim_REQUIRES='fzf vim'
+fzf_vim_REQUIRES='fzf-tmux vim'
 
 fzf_tmux_SUMMARY='fzf tmux integration'
 fzf_tmux_CONTENTS='usr/bin/fzf-tmux'
