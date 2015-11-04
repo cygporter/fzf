@@ -21,11 +21,15 @@ PKG_NAMES='fzf
 
 DEPEND='ruby(curses)'
 
+# Dependencies should generally be obvious, with the following exceptions:
+#
+# - ncurses: required to provide the tput executable.
 fzf_CONTENTS='usr/bin/fzf usr/share/doc usr/share/man'
+fzf_REQUIRES='ncurses'
 
 fzf_bash_SUMMARY='fzf key bindings for Bash'
 fzf_bash_CONTENTS='etc/profile.d/fzf.sh'
-fzf_bash_REQUIRES='fzf-tmux bash'
+fzf_bash_REQUIRES='fzf-tmux bash ncurses'
 
 fzf_zsh_SUMMARY='fzf key bindings for Z shell'
 fzf_zsh_CONTENTS='etc/profile.d/fzf.zsh'
