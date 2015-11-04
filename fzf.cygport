@@ -105,3 +105,17 @@ src_install () {
   # Man file
   doman "${S}/man/man1/fzf.1"
 }
+
+# TODO: The test scripts are currently disabled.  There are two scripts that
+# could be enabled:
+#
+# - test_go.rb: I've run this but it has a lot of failures, despite the main
+#   code working.  If it is to be enabled, to run at all it needs
+#   ruby(minitest) v5.x (Cygwin currently offers both v4.x and v5.x -- make
+#   sure to get the right one), ncurses and tmux.
+#
+# - fzf.vader: This appears to be a Vim test script using vader.vim from
+#   https://github.com/junegunn/vader.vim.
+src_test () {
+  :
+}
