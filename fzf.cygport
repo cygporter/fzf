@@ -53,10 +53,14 @@ fzf_vim_SUMMARY='fzf Vim integration'
 fzf_vim_CONTENTS='usr/share/vim/'
 fzf_vim_REQUIRES='fzf vim'
 
+# No compilation -- fzf does have a compiled version, but it requires Go, which
+# isn't available for Cygwin.
 src_compile () {
   :
 }
 
+# Since there was no compilation step, all the code is still in the src
+# directory, so all the files to be installed need to be taken from there.
 src_install () {
   # Main executables
   dobin "${S}/fzf"
