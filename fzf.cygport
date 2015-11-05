@@ -65,8 +65,16 @@ src_install () {
   dobin "${S}/fzf"
   dobin "${S}/bin/fzf-tmux"
 
+  # fzf defines completion commands for some programs that already have their
+  # own, e.g. kill in util-linux.  As a result, the fzf script needs to be
+  # invoked last so it can overwrite those completions, rather than having its
+  # completions overwritten.  The upstream installation achieves this thanks to
+  # the per-user scripts being invoked after the global ones, but as the Cygwin
+  # package cannot sensibly change ~/.bashrc, we make sure the fzf completion
+  # script is invoked last by just giving it a file name that will put it at
+  # the bottom of the list.
   insinto /etc/bash_completion.d
-  newins "${S}/shell/completion.bash" fzf
+  newins "${S}/shell/completion.bash" zzz-fzf
 
   # Ideally, the Bash key binding script would only be included for Bash, but
   # Cygwin's default /etc/profile doesn't source anything Bash-specific.
