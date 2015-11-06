@@ -4,7 +4,7 @@ For more information, see [the main fzf website][fzf].
 
 ## Usage
 
-```
+```sh
 cygport fzf.cygport download prep install package upload
 ```
 
