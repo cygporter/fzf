@@ -52,6 +52,7 @@ fzf_zsh_completion_REQUIRES='fzf zsh'
 fzf_vim_SUMMARY='fzf Vim integration'
 fzf_vim_CONTENTS='usr/share/vim/'
 fzf_vim_REQUIRES='fzf vim'
+fzf_vim_CATEGORY='Editors'
 
 # No compilation -- fzf does have a compiled version, but it requires Go, which
 # isn't available for Cygwin.
