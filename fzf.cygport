@@ -55,6 +55,7 @@ fzf_vim_REQUIRES='fzf vim'
 
 # No compilation -- fzf does have a compiled version, but it requires Go, which
 # isn't available for Cygwin.
+ARCH='noarch'
 src_compile () {
   :
 }
