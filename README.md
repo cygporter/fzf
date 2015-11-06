@@ -10,7 +10,7 @@ cygport fzf.cygport download prep install package upload
 
 (Note the lack of `compile` or `test` steps; these do nothing for this repository.)
 
-Be aware there appears to be [a bug preventing the `upload` step completing](https://cygwin.com/ml/cygwin-apps/2015-11/msg00028.html), so it may be necessary to complete that manually.  Script below, assuming ssh-agent already has the requisite key loaded:
+Be aware there appears to be [a bug preventing the `upload` step completing](https://cygwin.com/ml/cygwin-apps/2015-11/msg00028.html), so it may be necessary to complete that manually.  Script below, based on the Cygport version, assuming ssh-agent already has the requisite key loaded:
 
 ```sh
 lftp -f <(
