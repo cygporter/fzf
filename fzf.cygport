@@ -28,6 +28,7 @@ DEPEND='ruby(curses)'
 # neither seem to actually require tmux!
 fzf_CONTENTS='usr/bin/ usr/share/doc usr/share/man'
 fzf_REQUIRES='ncurses'
+fzf_CATEGORY='Utils'
 
 fzf_bash_SUMMARY='fzf key bindings for Bash'
 fzf_bash_CONTENTS='etc/profile.d/fzf.sh'
