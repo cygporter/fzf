@@ -5,7 +5,7 @@ CATEGORY='Shells'
 SUMMARY='Command line fuzzy finder'
 DESCRIPTION='fzf is a general-purpose command-line fuzzy finder'
 HOMEPAGE='https://github.com/junegunn/fzf'
-SRC_URI="https://github.com/junegunn/fzf/archive/${PV}.tar.gz"
+SRC_URI="https://github.com/junegunn/fzf/archive/${PV}/fzf-${PV}.tar.gz"
 SRC_DIR="${PN}-${PV}"
 
 PATCH_URI='bash-key-bindings-for-bash-only.patch'
