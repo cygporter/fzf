@@ -1,5 +1,5 @@
 NAME='fzf'
-VERSION='0.11.3'
+VERSION='0.11.4'
 RELEASE=1
 CATEGORY='Shells'
 SUMMARY='Command line fuzzy finder'
