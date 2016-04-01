@@ -27,7 +27,7 @@ DEPEND='ruby(curses)'
 # Experimentation shows that the fzf-tmux executable is required by fzf, but
 # neither seem to actually require tmux!
 fzf_CONTENTS='usr/bin/ usr/share/doc usr/share/man'
-fzf_REQUIRES='ncurses'
+fzf_REQUIRES='bash ncurses'
 fzf_CATEGORY='Utils'
 
 fzf_bash_SUMMARY='fzf key bindings for Bash'
