@@ -1,6 +1,6 @@
 NAME='fzf'
 VERSION='0.12.1'
-RELEASE=1
+RELEASE=2
 CATEGORY='Shells'
 SUMMARY='Command line fuzzy finder'
 DESCRIPTION='fzf is a general-purpose command-line fuzzy finder'
