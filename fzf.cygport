@@ -8,7 +8,7 @@ HOMEPAGE='https://github.com/junegunn/fzf'
 SRC_URI="https://github.com/junegunn/fzf/archive/${PV}/fzf-${PV}.tar.gz"
 SRC_DIR="${PN}-${PV}"
 
-PATCH_URI='bash-key-bindings-for-bash-only.patch'
+PATCH_URI='bash-key-bindings-for-bash-only.patch fix-bad-substitution.patch'
 
 PKG_NAMES='fzf
            fzf-bash

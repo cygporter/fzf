@@ -1,0 +1,11 @@
+--- origsrc/fzf-0.12.1/shell/completion.bash	2016-04-24 17:23:52.000000000 +0100
++++ src/fzf-0.12.1/shell/completion.bash	2017-10-03 16:32:41.721647900 +0100
+@@ -276,6 +276,8 @@ _fzf_defc() {
+   cmd="$1"
+   func="$2"
+   opts="$3"
++  cmd="${cmd//+/_}"
++  cmd="${cmd//-/_}"
+   orig_var="_fzf_orig_completion_$cmd"
+   orig="${!orig_var}"
+   if [ -n "$orig" ]; then
